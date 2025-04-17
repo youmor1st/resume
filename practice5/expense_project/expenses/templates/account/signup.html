@@ -1,0 +1,7 @@
+{% load i18n %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">{% trans "Sign Up" %}</button>
+</form>
+<p>Already have an account? <a href="{% url 'account_login' %}">Login</a></p>
